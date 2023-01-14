@@ -58,3 +58,19 @@ This dataset contains information on default payments, demographic factors, cred
 • PAY_AMT6: Amount of previous payment in April, 2005 (NT dollar)
 
 • default.payment.next.month: Default payment (1=yes, 0=no)
+
+## Conclusion
+
+ We have seen that our dataset was imbalanced class.
+
+ Most of the credit card holder was Female and Male customers have high default ratio.
+
+ Higher educated persons have less rate to be default whereas lower educated will maximum chances to be default.
+
+ After age 60s years chance of default is high.
+
+ The important metric to compare all the algorithms in this case is ‘Recall’. As the company can’t afford to predict False negative i.e. predict defaulter as a non    defaulter. Since, company is one, who will give to money to the customers,if, for any reason giving money to defaulter is gaining more risk to getting the investment back. Hence, here identifying false negative is important.
+
+ Random Forest Classifer model performs well in terms of recall(83.89%).
+
+ I will not consider KNN as my base model having similar recall as Random Forest Classisieer as its bestparams n_neighbors is 1 and can be noisy and lead to the effects of outliers in the model.KNN is not memory efficient. It becomes very slow as the number of datapoints increases as the model needs to store all the data points. It is computationally heavy because for a single datapoint the algorithm has to calculate the distance of all the datapoints and find the nearest neighbors.
